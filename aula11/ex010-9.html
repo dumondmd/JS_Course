@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema de imigração</h1>
+    Nasceu no <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res">
+    <script>
+        function verificar(){
+            var nac = window.document.querySelector('input#txtnac')
+            var result = window.document.querySelector('div#res')
+            var naci = nac.value
+            result.innerHTML = `<p>Você nasceu no país <strong>${naci}</strong></p>`
+            
+            if(naci == 'Brasil') {
+                result.innerHTML += `<p>Você é brasileiro</p>`
+            } else {
+                result.innerHTML += `<p>Você é extrangeiro</p>`      
+            }
+                       
+        }
+    </script>
+</body>
+</html>
